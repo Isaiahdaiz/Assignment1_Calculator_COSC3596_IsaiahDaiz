@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:padding="8dp"
+        android:text="0"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <!-- Calculator rows -->
+
+        <!-- Row 1: 7, 8, 9, / -->
+        <TableRow>
+
+            <Button
+                android:id="@+id/button7"
+                android:onClick="button7Clicked"
+                android:layout_margin="2dp"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button8"
+                android:onClick="button8Clicked"
+                android:layout_margin="2dp"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button9"
+                android:onClick="button9Clicked"
+                android:layout_margin="2dp"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/buttonDivide"
+                android:layout_margin="2dp"
+                android:onClick="buttonDivideClicked"
+                android:text="/"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <!-- Row 2: 4, 5, 6, * -->
+        <TableRow>
+
+            <Button
+                android:id="@+id/button4"
+                android:onClick="button4Clicked"
+                android:layout_margin="2dp"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button5"
+                android:onClick="button5Clicked"
+                android:layout_margin="2dp"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button6"
+                android:onClick="button6Clicked"
+                android:layout_margin="2dp"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:layout_margin="2dp"
+                android:onClick="buttonMultiplyClicked"
+                android:text="X"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <!-- Row 3: 1, 2, 3, - -->
+        <TableRow>
+
+            <Button
+                android:id="@+id/button1"
+                android:onClick="button1Clicked"
+                android:layout_margin="2dp"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:onClick="button2Clicked"
+                android:layout_margin="2dp"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button3"
+                android:onClick="button3Clicked"
+                android:layout_margin="2dp"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/buttonSubtract"
+                android:layout_margin="2dp"
+                android:onClick="buttonSubtractClicked"
+                android:text="-"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <!-- Row 4: 0, ., =, + -->
+        <TableRow>
+
+            <Button
+                android:id="@+id/button0"
+                android:onClick="button0Clicked"
+                android:layout_margin="2dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/buttonEquals"
+                android:layout_margin="2dp"
+                android:layout_span="2"
+                android:onClick="buttonEqualsClicked"
+                android:text="="
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_margin="2dp"
+                android:onClick="buttonAddClicked"
+                android:text="+"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <!-- Row 5: Clear button -->
+        <TableRow>
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_span="4"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="buttonClearClicked"
+                android:text="CLEAR"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
